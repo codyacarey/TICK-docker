@@ -42,20 +42,20 @@ services:
       - "9092:9092"
   # Define a service for using the influx CLI tool.
   # docker-compose run influxdb-cli
-  influxdb-cli:
-    image: influxdb:1.8.3
-    entrypoint:
-      - influx
-      - -host
-      - influxdb
-    links:
-      - influxdb
+  #influxdb-cli:
+  #  image: influxdb:1.8.3
+  #  entrypoint:
+  #    - influx
+  #    - -host
+  #    - influxdb
+  #  links:
+  #    - influxdb
   # Define a service for using the kapacitor CLI tool.
   # docker-compose run kapacitor-cli
-  kapacitor-cli:
-    image: kapacitor:1.5.6
-    entrypoint: bash
-    environment:
-      KAPACITOR_URL: http://kapacitor:9092
-    links:
-      - kapacitor
+  #kapacitor-cli:
+  #  image: kapacitor:1.5.6
+  #  entrypoint: bash
+  #  environment:
+  #    KAPACITOR_URL: http://kapacitor:9092
+  #  links:
+  #    - kapacitor
