@@ -26,7 +26,7 @@ services:
       INFLUXDB_URL: http://influxdb:8086
       KAPACITOR_URL: http://kapacitor:9092
     ports:
-      - "8888:8888"
+      - "80:8888"
     links:
       - influxdb
       - kapacitor
